@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="600.0" maxWidth="800.0" prefHeight="500.0" prefWidth="700.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.hssfds.bikeshop.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane prefHeight="500.0" prefWidth="500.0">
+      <children>
+         <ImageView fx:id="bild1" fitHeight="250.0" fitWidth="300.0" layoutX="37.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../pics/bike1.jpg" />
+            </image></ImageView>
+      
+          <Label layoutX="363.0" layoutY="45.0" prefHeight="17.0" prefWidth="46.0" text="Name:" />
+         <Label fx:id="lbl_akkukap" layoutX="362.0" layoutY="74.0" text="Akkukapazität:" />
+         <Label fx:id="lbl_drehmoment" layoutX="363.0" layoutY="103.0" text="Drehmoment:" />
+         <Label layoutX="363.0" layoutY="133.0" text="Zustand:" />
+         <Label layoutX="363.0" layoutY="163.0" text="Preis:" />
+          <Button layoutX="222.0" layoutY="232.0" onAction="#bildVor" text="&gt;">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <Button layoutX="125.0" layoutY="232.0" mnemonicParsing="false" onAction="#bildZuruck" text="&lt;">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Button>
+         <TextField fx:id="tf_name" layoutX="460.0" layoutY="41.0" />
+         <TextField fx:id="tf_akkukap" layoutX="460.0" layoutY="70.0" />
+         <TextField fx:id="tf_drehmoment" layoutX="460.0" layoutY="99.0" />
+         <TextField fx:id="tf_zustand" layoutX="460.0" layoutY="129.0" />
+         <TextField fx:id="tf_preis" layoutX="460.0" layoutY="159.0" />
+         <Button layoutX="31.0" layoutY="378.0" mnemonicParsing="false" onAction="#setToken" text="Auth-Token" />
+         <Label layoutX="125.0" layoutY="381.0" prefHeight="17.0" prefWidth="39.0" text="Email:" />
+         <TextField fx:id="tf_email" layoutX="162.0" layoutY="378.0" />
+         <Label layoutX="327.0" layoutY="381.0" prefHeight="17.0" prefWidth="59.0" text="Password:" />
+         <TextField fx:id="tf_password" layoutX="386.0" layoutY="378.0" />
+         <TextField fx:id="tf_token" layoutX="78.0" layoutY="418.0" prefHeight="25.0" prefWidth="531.0" />
+         <Label layoutX="36.0" layoutY="420.0" text="Token:" />
+         <TextField fx:id="tf_value" layoutX="530.0" layoutY="306.0" prefHeight="25.0" prefWidth="127.0" />
+         <TextField fx:id="tf_key" layoutX="530.0" layoutY="341.0" prefHeight="25.0" prefWidth="127.0" />
+         <Label layoutX="488.0" layoutY="310.0" text="Value:" />
+         <Label layoutX="494.0" layoutY="345.0" text="Key:" />
+         <Button layoutX="378.0" layoutY="306.0" mnemonicParsing="false" onAction="#inDBschreiben" text="In DB schreiben" />
+         <Button layoutX="378.0" layoutY="341.0" mnemonicParsing="false" onAction="#ausDBlesen" text="Aus DB lesen" />
+         <Button layoutX="414.0" layoutY="204.0" mnemonicParsing="false" onAction="#saveInFirebase" text="in Firebase speichern" />
+         <Button layoutX="419.0" layoutY="234.0" mnemonicParsing="false" onAction="#loadFromFirebase" text="aus Firebase lesen " />
+      </children>
+   </Pane>
+</VBox>
